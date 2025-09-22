@@ -92,6 +92,7 @@ class ConstString {
 
   // Validation messages for "Create Account" screen
   static const pleaseEnterYourFullName = 'Please Enter Your Full Name';
+  static const pleaseEnterYourPassword = 'Please Enter Your Password';
   static const pleaseEnterYourName = 'Please Enter Your Name';
   static const pleaseEnterYourphone = 'Please Enter Phone Number';
   static const pleaseEnterEmail = 'Please Enter E-Mail';
