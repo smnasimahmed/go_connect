@@ -7,7 +7,10 @@ ThemeData themeDataLight = ThemeData(
   scaffoldBackgroundColor: Colors.white,
   useMaterial3: true,
   textTheme: GoogleFonts.robotoTextTheme(
-    ThemeData.dark().textTheme.apply(bodyColor: Colors.black, displayColor: Colors.black),
+    ThemeData.dark().textTheme.apply(
+      bodyColor: ConstColour.textColor,
+      displayColor: ConstColour.textColor,
+    ),
   ),
   colorSchemeSeed: ConstColour.primaryColor,
 );

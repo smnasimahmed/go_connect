@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_connect/auth_screens/resetPassword/controllers/resetPasswordController.dart';
-import 'package:go_connect/constant/const_colour.dart';
 import 'package:go_connect/constant/const_string.dart';
 import 'package:go_connect/custom_widget/authAppbarBackButton.dart';
+import 'package:go_connect/custom_widget/authTopDisplay.dart';
 import 'package:go_connect/custom_widget/custom_elevated_button.dart';
 import 'package:go_connect/custom_widget/custom_formField.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
@@ -19,37 +19,25 @@ class Resetpasswordpage extends StatelessWidget {
       init: Resetpasswordcontroller(),
       builder: (controller) {
         return Scaffold(
-          bottomNavigationBar: Padding(
-            padding: const EdgeInsets.only(bottom: 55, right: 16, left: 16.0),
-            child: CustomElevatedButton(
-              child: Customtext(
-                title: ConstString.continueButton,
-                textSize: AppSize.width(value: 12),
-                fontWeight: FontWeight.w400,
-                textColor: ConstColour.appDarktBackGround,
-              ),
-              onPressed: () {
-                if (controller.resetpassValidKey.currentState!.validate()) {
-                  Get.offAllNamed(AppRoutes.signinpage);
-                }
-              },
-            ),
+          appBar: AppBar(
+            leading: AuthAppBarBackButton(),
+            shadowColor: Colors.transparent,
+            surfaceTintColor: Colors.transparent,
+            backgroundColor: Colors.transparent,
           ),
-          appBar: AppBar(leading: AuthAppBarBackButton()),
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Form(
                 key: controller.resetpassValidKey,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Customtext(
-                      title: ConstString.resetPasswordTitle,
-                      textSize: AppSize.width(value: 22),
-                      fontWeight: FontWeight.w500,
+                    AuthTopDisplay(
+                      title: ConstString.newPasswordTitle,
+                      subTitile: ConstString.setANewPasswordSubtitle,
                     ),
-
                     CustomTextFormField(
                       hintText: Customtext(
                         title: ConstString.password,
@@ -104,6 +92,7 @@ class Resetpasswordpage extends StatelessWidget {
                       },
                       fromTitle: ConstString.confirmPassword,
                     ),
+                    _bottomButton(controller),
                   ],
                 ),
               ),
@@ -111,6 +100,25 @@ class Resetpasswordpage extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+
+  Padding _bottomButton(Resetpasswordcontroller controller) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 55, top: 23),
+      child: CustomElevatedButton(
+        child: Customtext(
+          title: ConstString.update,
+          textSize: AppSize.width(value: 18),
+          fontWeight: FontWeight.w400,
+          textColor: Colors.white,
+        ),
+        onPressed: () {
+          if (controller.resetpassValidKey.currentState!.validate()) {
+            Get.offAllNamed(AppRoutes.signinpage);
+          }
+        },
+      ),
     );
   }
 }

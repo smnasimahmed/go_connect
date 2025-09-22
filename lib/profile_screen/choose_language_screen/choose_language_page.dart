@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_connect/constant/const_colour.dart';
 import 'package:go_connect/constant/const_string.dart';
 import 'package:go_connect/custom_widget/appbar_blank_back_button.dart';
 import 'package:go_connect/custom_widget/custom_elevated_button.dart';
@@ -47,7 +48,7 @@ class ChooseLanguagePage extends StatelessWidget {
                     title: ConstString.pleasepSelectLanguage,
                     textSize: AppSize.width(value: 18),
                     fontWeight: FontWeight.w400,
-                    textColor: Colors.black,
+                    textColor: ConstColour.textColor,
                     textAlign: TextAlign.center,
                   ),
 

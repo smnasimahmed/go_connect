@@ -4,6 +4,7 @@ import 'package:go_connect/auth_screens/forgetPassword/controllers/forgetPasswor
 import 'package:go_connect/constant/const_colour.dart';
 import 'package:go_connect/constant/const_string.dart';
 import 'package:go_connect/custom_widget/authAppbarBackButton.dart';
+import 'package:go_connect/custom_widget/authTopDisplay.dart';
 import 'package:go_connect/custom_widget/custom_elevated_button.dart';
 import 'package:go_connect/custom_widget/custom_formField.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
@@ -19,50 +20,45 @@ class Forgetpasswordpage extends StatelessWidget {
       init: Forgetpasswordcontroller(),
       builder: (controller) {
         return Scaffold(
-          bottomNavigationBar: _bottomButton(controller),
-          appBar: AppBar(leading: AuthAppBarBackButton()),
-          body: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Form(
-                key: controller.forgotpassValidKey,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Customtext(
-                      title: ConstString.forgetPasswordTitle,
-                      textSize: AppSize.width(value: 22),
-                      fontWeight: FontWeight.w500,
+          appBar: AppBar(
+            leading: AuthAppBarBackButton(),
+            shadowColor: Colors.transparent,
+            surfaceTintColor: Colors.transparent,
+            backgroundColor: Colors.transparent,
+          ),
+          body: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Form(
+              key: controller.forgotpassValidKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  AuthTopDisplay(
+                    title: ConstString.forgetPasswordTitle,
+                    subTitile: ConstString.aboutUs,
+                  ),
+                  CustomTextFormField(
+                    hintText: Customtext(
+                      title: ConstString.emailAddress,
+                      textSize: AppSize.width(value: 12),
+                      fontWeight: FontWeight.w400,
                     ),
-                    Customtext(
-                      title: ConstString.enterRegisterEmailToResetPassword,
-                      textSize: AppSize.width(value: 10),
-                      fontWeight: FontWeight.w500,
-                      textColor: Colors.white,
-                      top: 8,
-                      bottom: 22,
-                    ),
-                    CustomTextFormField(
-                      hintText: Customtext(
-                        title: ConstString.emailAddress,
-                        textSize: AppSize.width(value: 12),
-                        fontWeight: FontWeight.w400,
-                      ),
 
-                      textController: controller.forgotpassEmailConttroller,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return ConstString.pleaseEnterEmail;
-                        }
-                        if (!value.contains('@') || !value.contains('.')) {
-                          return ConstString.pleaseEnterAValidEmailAddress;
-                        }
-                        return null;
-                      },
-                      fromTitle: ConstString.email,
-                    ),
-                  ],
-                ),
+                    textController: controller.forgotpassEmailConttroller,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return ConstString.pleaseEnterEmail;
+                      }
+                      if (!value.contains('@') || !value.contains('.')) {
+                        return ConstString.pleaseEnterAValidEmailAddress;
+                      }
+                      return null;
+                    },
+                    fromTitle: ConstString.email,
+                  ),
+                  _bottomButton(controller),
+                ],
               ),
             ),
           ),
@@ -73,25 +69,18 @@ class Forgetpasswordpage extends StatelessWidget {
 
   Padding _bottomButton(Forgetpasswordcontroller controller) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 55, right: 16, left: 16.0),
+      padding: const EdgeInsets.only(bottom: 55, top: 10),
       child: Wrap(
         children: [
           CustomElevatedButton(
             child: Customtext(
               title: ConstString.continueButton,
-              textSize: AppSize.width(value: 12),
+              textSize: AppSize.width(value: 18),
               fontWeight: FontWeight.w400,
-              textColor: ConstColour.appDarktBackGround,
+              textColor: Colors.white,
             ),
             onPressed: () {
               if (controller.forgotpassValidKey.currentState!.validate()) {
-                // AppStorage().setEmailID(
-                //   controller.forgotpassEmailConttroller.text,
-                // );
-                // print(
-                //   '**************************${controller.forgotpassEmailConttroller.text}',
-                // );
-                // controller.update();
                 Get.toNamed(
                   AppRoutes.forgetpasswordotppage,
                   arguments: controller.forgotpassEmailConttroller.text,

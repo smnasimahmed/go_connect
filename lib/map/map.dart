@@ -19,13 +19,13 @@ class LocationSelectionScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+          icon: Icon(Icons.arrow_back_ios, color: ConstColour.textColor),
           onPressed: () => Get.back(),
         ),
         title: Text(
           ConstString.selectYourlocation, //'Select your Location',
           style: TextStyle(
-            color: Colors.black,
+            color: ConstColour.textColor,
             fontSize: 18,
             fontWeight: FontWeight.w600,
           ),

@@ -45,10 +45,13 @@ class MainAppbar extends StatelessWidget implements PreferredSizeWidget {
                           Customtext(
                             textSize: 13,
                             fontWeight: FontWeight.w400,
-                            textColor: Colors.black,
+                            textColor: ConstColour.textColor,
                             title: "Dugbe, Ibadan",
                           ),
-                          const Icon(Icons.keyboard_arrow_down, color: Colors.black),
+                          const Icon(
+                            Icons.keyboard_arrow_down,
+                            color: ConstColour.textColor,
+                          ),
                         ],
                       ),
                     ),

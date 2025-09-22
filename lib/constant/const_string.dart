@@ -1,6 +1,7 @@
 class ConstString {
   static const yes = 'Yes';
   static const no = 'No';
+  static const code = 'Code';
   static const areYouSureLogOut = 'Are you sure want to log out?';
   // Strings from "Verify Account!" screen
   static const verifyAccountTitle = 'Verify Account!';
@@ -8,15 +9,40 @@ class ConstString {
   static const resend = 'Resend ';
   static const codeAgain = 'Code Again';
   static const verifyAccount = 'Verify Account';
+  static const verify = 'Verify';
   static const phoneNumber = 'Phone Number';
   static const setPassword = 'Set Password';
   static const email = 'E-mail';
-  // static const email = 'E-mail';
-  // static const email = 'E-mail';
-  // static const email = 'E-mail';
-  // static const email = 'E-mail';
-  // static const email = 'E-mail';
-  // static const email = 'E-mail';
+  static const signUp = 'Sign Up';
+  static const verification = 'Verification';
+  static const sentVerificationCode = 'We have sent you a verification code to';
+  static const welcomeBack = 'Welcome back';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+  // static const verification = 'Verification';
+
+  static const String welcomeBackTitle = 'Welcome back';
+  static const String signUpToContinueSubtitle = 'Sign Up to continue';
+  static const String signInToContinueSubtitle = 'Sign in to continue';
+  static const String firstNameLabel = 'First Name';
+  static const String lastNameLabel = 'Last Name';
+  static const String phoneNumberLabel = 'Phone Number';
+  static const String agreeToTermsLabel = 'I agree to the terms of service';
 
   // Strings from "Create Account" screen
   static const createAccountTitle = 'Create Account';
@@ -35,7 +61,6 @@ class ConstString {
 
   // Strings from "Sign In" screen
   static const signInTitle = 'Sign In';
-  static const forgetYour = 'Forget your ';
   static const signInButton = 'Sign In';
   static const dontHaveAnAccount = 'Don\'t have an Account? ';
   static const createAccount =
@@ -60,7 +85,8 @@ class ConstString {
   static const submitButton = 'Submit';
 
   // Strings from "Reset Password" screen
-  static const resetPasswordTitle = 'Reset Password';
+  static const newPasswordTitle = 'New Password';
+  static const setANewPasswordSubtitle = 'Set a new password to continue.';
   static const enterFull6DigitOTP = 'Enter full 6-digit OTP';
   static const invalidOTP = 'Invalid OTP';
 
@@ -68,6 +94,7 @@ class ConstString {
   static const pleaseEnterYourFullName = 'Please Enter Your Full Name';
   static const pleaseEnterYourName = 'Please Enter Your Name';
   static const pleaseEnterEmail = 'Please Enter E-Mail';
+  static const pleaseEnterPhone = 'Please Enter Phone Number';
   static const pleaseEnterAValidEmailAddress = 'Please enter a valid email address';
   static const pleaseEnterPasswordAtLeast8Digit =
       'Please Enter Password at least 8 Digit';

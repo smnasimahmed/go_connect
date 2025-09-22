@@ -33,13 +33,15 @@ class CustomTextFormField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Customtext(
+            top: 5,
+            bottom: 2,
             title: fromTitle,
             textSize: AppSize.width(value: 14),
             fontWeight: FontWeight.w600,
           ),
           TextFormField(
             style: TextStyle(
-              color: Colors.black,
+              color: ConstColour.textColor,
               fontSize: AppSize.width(value: 12),
               fontWeight: FontWeight.w400,
               fontFamily: 'Poppins',
@@ -57,7 +59,7 @@ class CustomTextFormField extends StatelessWidget {
               fillColor: backgroundColor,
               hoverColor: ConstColour.primaryColor,
               hintStyle: TextStyle(
-                color: Colors.black,
+                color: ConstColour.textColor,
                 fontSize: AppSize.width(value: 12),
                 fontWeight: FontWeight.w400,
                 fontFamily: 'Poppins',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_connect/auth_screens/signIn/controllers/signInController.dart';
+import 'package:go_connect/custom_widget/authTopDisplay.dart';
 import 'package:go_connect/utils/storage_service.dart';
 import 'package:go_connect/constant/const_colour.dart';
 import 'package:go_connect/constant/const_string.dart';
@@ -21,77 +22,69 @@ class Signinpage extends StatelessWidget {
       builder: (controller) {
         return Scaffold(
           bottomNavigationBar: bottomButtons(controller),
-          body: SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: AppSize.width(value: 16.0)),
-              child: Form(
-                key: controller.signInValidKey,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Customtext(
-                      title: ConstString.signIn,
-                      textSize: AppSize.width(value: 22),
-                      fontWeight: FontWeight.w500,
-                      bottom: 12,
+          body: Padding(
+            padding: EdgeInsets.symmetric(horizontal: AppSize.width(value: 16.0)),
+            child: Form(
+              key: controller.signInValidKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  AuthTopDisplay(
+                    title: ConstString.welcomeBackTitle,
+                    subTitile: ConstString.signInToContinueSubtitle,
+                  ),
+                  CustomTextFormField(
+                    hintText: Customtext(
+                      title: ConstString.emailAddress,
+                      textSize: AppSize.width(value: 12),
+                      fontWeight: FontWeight.w400,
                     ),
-                    CustomTextFormField(
-                      hintText: Customtext(
-                        title: ConstString.emailAddress,
-                        textSize: AppSize.width(value: 12),
-                        fontWeight: FontWeight.w400,
-                      ),
 
-                      textController: controller.signInEmailTextController,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return ConstString.pleaseEnterEmail;
-                        }
-                        if (!value.contains('@') || !value.contains('.')) {
-                          return ConstString.pleaseEnterAValidEmailAddress;
-                        }
-                        return null;
-                      },
-                      fromTitle: ConstString.phoneNumber,
+                    textController: controller.signInEmailTextController,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return ConstString.pleaseEnterEmail;
+                      }
+                      if (!value.contains('@') || !value.contains('.')) {
+                        return ConstString.pleaseEnterAValidEmailAddress;
+                      }
+                      return null;
+                    },
+                    fromTitle: ConstString.phoneNumber,
+                  ),
+                  CustomTextFormField(
+                    hintText: Customtext(
+                      title: ConstString.password,
+                      textSize: AppSize.width(value: 12),
+                      fontWeight: FontWeight.w400,
                     ),
-                    CustomTextFormField(
-                      hintText: Customtext(
-                        title: ConstString.password,
-                        textSize: AppSize.width(value: 12),
-                        fontWeight: FontWeight.w400,
-                      ),
 
-                      textController: controller.signInPasswordTextController,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return ConstString.pleaseEnterPassword;
-                        }
-                        return null;
-                      },
-                      fromTitle: ConstString.password,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Customtext(
-                          title: ConstString.forgetYour,
+                    textController: controller.signInPasswordTextController,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return ConstString.pleaseEnterPassword;
+                      }
+                      return null;
+                    },
+                    fromTitle: ConstString.password,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        onTap: () => Get.toNamed(AppRoutes.forgetpasswordpage),
+                        child: Customtext(
+                          top: 10,
+                          title: '${ConstString.forgetPasswordTitle}?',
                           textSize: AppSize.width(value: 10),
                           fontWeight: FontWeight.w400,
                           textColor: Colors.red,
                         ),
-                        GestureDetector(
-                          onTap: () => Get.toNamed(AppRoutes.forgetpasswordpage),
-                          child: Customtext(
-                            title: '${ConstString.password}?',
-                            textSize: AppSize.width(value: 10),
-                            fontWeight: FontWeight.w400,
-                            textColor: Colors.red,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
@@ -112,9 +105,9 @@ class Signinpage extends StatelessWidget {
                 CustomElevatedButton(
                   child: Customtext(
                     title: ConstString.signIn,
-                    textSize: AppSize.width(value: 12),
+                    textSize: AppSize.width(value: 18),
                     fontWeight: FontWeight.w400,
-                    textColor: ConstColour.appDarktBackGround,
+                    textColor: Colors.white,
                   ),
                   onPressed: () {
                     if (controller.signInValidKey.currentState!.validate()) {
@@ -128,6 +121,7 @@ class Signinpage extends StatelessWidget {
                   children: [
                     Customtext(
                       title: ConstString.dontHaveAnAccount,
+                      textColor: ConstColour.silverGray20,
                       top: 13,
                       textSize: 12,
                       fontWeight: FontWeight.w500,
