@@ -95,6 +95,7 @@ class HomePage extends StatelessWidget {
                       CustomElevatedButton(
                         top: 11,
                         bottom: 36,
+                        buttonBorderRadius: 8,
                         height: AppSize.width(value: 36),
                         width: AppSize.width(value: 115),
                         child: Customtext(

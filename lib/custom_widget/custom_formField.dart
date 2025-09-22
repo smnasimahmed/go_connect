@@ -36,7 +36,7 @@ class CustomTextFormField extends StatelessWidget {
             top: 5,
             bottom: 2,
             title: fromTitle,
-            textSize: AppSize.width(value: 14),
+            textSize: AppSize.width(value: 16),
             fontWeight: FontWeight.w600,
           ),
           TextFormField(
@@ -59,7 +59,7 @@ class CustomTextFormField extends StatelessWidget {
               fillColor: backgroundColor,
               hoverColor: ConstColour.primaryColor,
               hintStyle: TextStyle(
-                color: ConstColour.textColor,
+                color: ConstColour.cardBorderColour,
                 fontSize: AppSize.width(value: 12),
                 fontWeight: FontWeight.w400,
                 fontFamily: 'Poppins',

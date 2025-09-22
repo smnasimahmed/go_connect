@@ -17,7 +17,7 @@ class ConstString {
   static const verification = 'Verification';
   static const sentVerificationCode = 'We have sent you a verification code to';
   static const welcomeBack = 'Welcome back';
-  // static const verification = 'Verification';
+  static const notification = 'Notification';
   // static const verification = 'Verification';
   // static const verification = 'Verification';
   // static const verification = 'Verification';
@@ -125,6 +125,11 @@ class ConstString {
   static const String editProfileInformation = 'Edit Profile Information';
   static const String switchIntoHost = 'Switch Into Host';
   static const String chooseLanguage = 'Choose Language';
+  static const String changePassword = 'Change Password';
+  static const String currrentPassword = 'Current Password';
+  static const String enterNewpassword = 'Enter New Password';
+  static const String enterOldpassword = 'Enter Old Password';
+  static const String reEnterNewPassword = 'Re Enter New Password';
   static const String favorites = 'Favorites';
   static const String aboutUs = 'About Us';
   static const String termsAndConditions = 'Terms and Conditions';

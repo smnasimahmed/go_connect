@@ -29,7 +29,7 @@ class MainApp extends StatelessWidget {
           theme: themeDataLight,
           defaultTransition: Transition.noTransition,
           getPages: appRouteFile,
-          initialRoute: AppRoutes.signinpage, //AppRoutes.startingScreens,
+          initialRoute: AppRoutes.navbar, //AppRoutes.startingScreens,
           // home: CarCard(),
         ),
       ),
