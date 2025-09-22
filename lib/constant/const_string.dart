@@ -93,6 +93,7 @@ class ConstString {
   // Validation messages for "Create Account" screen
   static const pleaseEnterYourFullName = 'Please Enter Your Full Name';
   static const pleaseEnterYourName = 'Please Enter Your Name';
+  static const pleaseEnterYourphone = 'Please Enter Phone Number';
   static const pleaseEnterEmail = 'Please Enter E-Mail';
   static const pleaseEnterPhone = 'Please Enter Phone Number';
   static const pleaseEnterAValidEmailAddress = 'Please enter a valid email address';
@@ -137,6 +138,7 @@ class ConstString {
   static const String deleteAccount = 'Delete Account';
   static const String logOut = 'Log Out';
   static const String profile = 'Profile';
+  static const String editProfile = 'Edit Profile';
   static const String language = 'Language';
   static const String update = 'Update';
   static const String savedPost = 'Saved Post';

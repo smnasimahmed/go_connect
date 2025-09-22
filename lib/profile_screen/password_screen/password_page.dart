@@ -36,6 +36,7 @@ class PasswordPage extends StatelessWidget {
           ),
           appBar: appBarBlankWithBackButton(ConstString.changePassword),
           body: Form(
+            key: controller.signInValidKey,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 37),
               child: Column(
@@ -44,11 +45,17 @@ class PasswordPage extends StatelessWidget {
                     fromTitle: ConstString.currrentPassword,
                     textController: controller.currrentPassword,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return ConstString.pleaseEnterEmail;
+                      if (value!.length < 7) {
+                        return ConstString.pleaseEnterPasswordAtLeast8Digit;
                       }
-                      if (!value.contains('@') || !value.contains('.')) {
-                        return ConstString.pleaseEnterAValidEmailAddress;
+                      if (!value.contains('!') &&
+                          !value.contains('@') &&
+                          !value.contains('#') &&
+                          !value.contains('\$')) {
+                        return ConstString.pleaseUseSpecialCharsInPassword;
+                      }
+                      if (value.isEmpty) {
+                        return ConstString.pleaseEnterPassword;
                       }
                       return null;
                     },
@@ -62,11 +69,21 @@ class PasswordPage extends StatelessWidget {
                     fromTitle: ConstString.setPassword,
                     textController: controller.setPassword,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return ConstString.pleaseEnterEmail;
+                      if (controller.setPassword.value.text !=
+                          controller.confirmPassword.value.text) {
+                        return ConstString.bothPasswordDoesNotMatch;
                       }
-                      if (!value.contains('@') || !value.contains('.')) {
-                        return ConstString.pleaseEnterAValidEmailAddress;
+                      if (value!.length < 7) {
+                        return ConstString.pleaseEnterPasswordAtLeast8Digit;
+                      }
+                      if (!value.contains('!') &&
+                          !value.contains('@') &&
+                          !value.contains('#') &&
+                          !value.contains('\$')) {
+                        return ConstString.pleaseUseSpecialCharsInPassword;
+                      }
+                      if (value.isEmpty) {
+                        return ConstString.pleaseEnterPassword;
                       }
                       return null;
                     },
@@ -80,11 +97,21 @@ class PasswordPage extends StatelessWidget {
                     fromTitle: ConstString.confirmPassword,
                     textController: controller.confirmPassword,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return ConstString.pleaseEnterEmail;
+                      if (controller.setPassword.value.text !=
+                          controller.confirmPassword.value.text) {
+                        return ConstString.bothPasswordDoesNotMatch;
                       }
-                      if (!value.contains('@') || !value.contains('.')) {
-                        return ConstString.pleaseEnterAValidEmailAddress;
+                      if (value!.length < 7) {
+                        return ConstString.pleaseEnterPasswordAtLeast8Digit;
+                      }
+                      if (!value.contains('!') &&
+                          !value.contains('@') &&
+                          !value.contains('#') &&
+                          !value.contains('\$')) {
+                        return ConstString.pleaseUseSpecialCharsInPassword;
+                      }
+                      if (value.isEmpty) {
+                        return ConstString.pleaseEnterPassword;
                       }
                       return null;
                     },
