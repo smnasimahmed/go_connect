@@ -145,4 +145,6 @@ class ConstString {
   static const String savedPost = 'Saved Post';
   static const String pleasepSelectLanguage =
       'Please select your preferred language to\nfacilitate communication';
+  static const String deleteAccountMessage =
+      'This will permanently remove your profile, matches, and all messages. This action cannot be undone.';
 }

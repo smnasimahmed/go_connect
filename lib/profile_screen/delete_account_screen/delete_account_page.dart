@@ -23,8 +23,9 @@ class DeleteAccountPage extends StatelessWidget {
             bottom: 42,
             right: 12,
             left: 12,
+            color: const Color.fromARGB(255, 187, 12, 0),
             child: Customtext(
-              title: ConstString.update,
+              title: ConstString.deleteAccount,
               textSize: AppSize.width(value: 18),
               fontWeight: FontWeight.w400,
               textColor: Colors.white,
@@ -35,13 +36,21 @@ class DeleteAccountPage extends StatelessWidget {
               }
             },
           ),
-          appBar: appBarBlankWithBackButton(ConstString.changePassword),
+          appBar: appBarBlankWithBackButton(ConstString.deleteAccount),
           body: Form(
             key: controller.signInValidKey,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 37),
               child: Column(
                 children: [
+                  Customtext(
+                    title: ConstString.deleteAccountMessage,
+                    textSize: 16,
+                    fontWeight: FontWeight.w500,
+                    textAlign: TextAlign.center,
+                    textColor: Colors.red,
+                    bottom: 20,
+                  ),
                   CustomTextFormField(
                     fromTitle: ConstString.pleaseEnterYourPassword,
                     textController: controller.passwordController,
