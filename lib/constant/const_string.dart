@@ -18,7 +18,7 @@ class ConstString {
   static const sentVerificationCode = 'We have sent you a verification code to';
   static const welcomeBack = 'Welcome back';
   static const notification = 'Notification';
-  // static const verification = 'Verification';
+  static const cars = 'Cars';
   // static const verification = 'Verification';
   // static const verification = 'Verification';
   // static const verification = 'Verification';

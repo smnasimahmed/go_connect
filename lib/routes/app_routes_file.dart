@@ -5,6 +5,7 @@ import 'package:go_connect/auth_screens/forgetPasswordOTP/forgetPasswordOTPPage.
 import 'package:go_connect/auth_screens/resetPassword/resetPasswordPage.dart';
 import 'package:go_connect/auth_screens/signIn/signInPage.dart';
 import 'package:go_connect/auth_screens/verificationforAccount/verificationforAccountPage.dart';
+import 'package:go_connect/cars_screens/cars_page.dart';
 import 'package:go_connect/navbar/navbar.dart';
 import 'package:go_connect/notification_screen/notification_page.dart';
 import 'package:go_connect/profile_screen/about_us_screen/about_us_page.dart';
@@ -61,4 +62,7 @@ List<GetPage> appRouteFile = <GetPage>[
   GetPage(name: AppRoutes.termsConditionsPage, page: () => const TermsConditionsPage()),
   GetPage(name: AppRoutes.faqPage, page: () => const FaqPage()),
   GetPage(name: AppRoutes.deleteAccountPage, page: () => const DeleteAccountPage()),
+
+  //////////////// Home /////////////////////
+  GetPage(name: AppRoutes.carsPage, page: () => const CarsPage()),
 ];

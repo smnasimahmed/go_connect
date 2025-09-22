@@ -3,6 +3,9 @@
 class AppRoutes {
   AppRoutes._();
 
+  static const carsPage = '/carsPage';
+
+  //////////////// Auth Part ///////////////////////
   static String initialPage = '/';
   static const navbar = '/navbar';
   static const createaccountpage = '/Createaccountpage';

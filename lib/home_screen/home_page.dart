@@ -6,6 +6,7 @@ import 'package:go_connect/custom_widget/car_slider.dart';
 import 'package:go_connect/custom_widget/custom_elevated_button.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
 import 'package:go_connect/home_screen/controller/home_page_controller.dart';
+import 'package:go_connect/routes/app_routes.dart';
 import 'package:go_connect/utils/appSize.dart';
 
 class HomePage extends StatelessWidget {
@@ -46,7 +47,7 @@ class HomePage extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           textAlign: TextAlign.center,
                         ),
-                        onPressed: () {},
+                        onPressed: () => Get.toNamed(AppRoutes.carsPage),
                       ),
                     ],
                   ),

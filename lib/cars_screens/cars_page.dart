@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:go_connect/constant/const_string.dart';
+import 'package:go_connect/custom_widget/appbar_blank_back_button.dart';
 import 'package:go_connect/custom_widget/car_card.dart';
 
-class SearchPage extends StatelessWidget {
-  const SearchPage({super.key});
+class CarsPage extends StatelessWidget {
+  const CarsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBarBlankWithBackButton(ConstString.cars),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0),
