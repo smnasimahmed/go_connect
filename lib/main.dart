@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
-import 'package:go_connect/routes/app_routes.dart';
-import 'package:go_connect/routes/app_routes_file.dart';
+import 'package:go_connect/car_details_screen/car_details_page.dart';
+// import 'package:go_connect/routes/app_routes.dart';
+// import 'package:go_connect/routes/app_routes_file.dart';
 import 'package:go_connect/utils/appSize.dart';
 import 'package:go_connect/utils/theme.dart';
 
@@ -28,9 +29,9 @@ class MainApp extends StatelessWidget {
           themeMode: ThemeMode.light,
           theme: themeDataLight,
           defaultTransition: Transition.noTransition,
-          getPages: appRouteFile,
-          initialRoute: AppRoutes.navbar, //AppRoutes.startingScreens,
-          // home: CarCard(),
+          // getPages: appRouteFile,
+          // initialRoute: AppRoutes.navbar, //AppRoutes.startingScreens,
+          home: CarDetailsPage(),
         ),
       ),
     );

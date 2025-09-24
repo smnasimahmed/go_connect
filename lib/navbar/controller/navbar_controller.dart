@@ -4,7 +4,6 @@ import 'package:get_storage/get_storage.dart';
 import 'package:go_connect/booking_screen/booking_page.dart';
 import 'package:go_connect/chat_screen/chat_page.dart';
 import 'package:go_connect/constant/const_icons.dart';
-import 'package:go_connect/constant/const_string.dart';
 import 'package:go_connect/home_screen/home_page.dart';
 import 'package:go_connect/search_screen/search_page.dart';
 

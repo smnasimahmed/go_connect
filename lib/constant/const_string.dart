@@ -147,4 +147,57 @@ class ConstString {
       'Please select your preferred language to\nfacilitate communication';
   static const String deleteAccountMessage =
       'This will permanently remove your profile, matches, and all messages. This action cannot be undone.';
+
+  ///////////////////////// Cars Details ///////////////////////////////
+  static const String carsDetails = 'Cars Details';
+  static const String checkAvaiablity = 'Check avaiablity';
+  static const String about = 'About';
+  static const String photos = 'Photos';
+  static const String review = 'Review';
+  static const String location = 'Location';
+  static const String features = 'Features';
+  static const String carType = 'Car Type';
+  static const String seats = 'Seats';
+  static const String transmission = 'Transmission';
+  static const String fuelType = 'Fuel Type';
+  static const String airConditioning = 'Air Conditioning';
+  static const String gpsNavigation = 'GPS Navigation';
+  static const String mileage = 'Mileage';
+  static const String bluetooth = 'Bluetooth';
+  static const String description = 'Description';
+  static const String hostedBy = 'Hosted By';
+  static const String viewDetails = 'View Details';
+  static const String bookNow = 'Book Now';
+  static const String price = 'Price';
+  static const String viewOnMap = 'View On Map';
+  static const String day = 'Day';
+
+  ///////////////////////// Cars Booking ///////////////////////////////
+  static const String booking = 'Booking';
+  static const String bookingtype = 'Booking Type';
+  static const String withDriver = 'With Driver';
+  static const String withOutDriver = 'Without Driver';
+  static const String vehicaleType = 'Vehicale Type';
+  static const String chooseTime = 'Choose Time';
+  static const String paymentMethod = 'Payment Method';
+  static const String choosePaymentOption = 'Choose Payment Option';
+  static const String details = 'Details';
+  static const String duration = 'Duration';
+  static const String dayRate = 'Day Rate';
+  static const String driverFee = 'Driver Fee';
+  static const String totalCost = 'Total Cost';
+  static const String iHaveReadandAgreeToThe = 'I have read and agree to the ';
+  static const String requestABook = 'Request A book';
+  static const String date = 'Date';
+  static const String time = 'Time';
+
+  ///////////////////////// Owner Details ///////////////////////////////
+  static const String ownerDetails = 'Owner Details';
+  static const String verifiedInfo = 'Verified Info';
+  static const String approved = 'Approved';
+  static const String vehicles = 'Vehicles';
+  static const String reviews = 'Reviews';
+  static const String stars = 'Stars';
+  static const String noReviewsAvailable = 'No reviews available';
+  static const String noReviewsYet = 'No reviews yet';
 }
