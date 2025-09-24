@@ -70,7 +70,7 @@ class Map extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20.0, bottom: 10),
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+        // padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -81,20 +81,28 @@ class Map extends StatelessWidget {
           ],
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: ConstColour.cardBorderColour),
+          // border: Border.all(color: ConstColour.cardBorderColour),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Customtext(
+              textSize: 20,
+              fontWeight: FontWeight.w600,
+              title: ConstString.location, //AppString.location,
+            ),
+            SizedBox(height: AppSize.width(value: 10)),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Customtext(
-                  textSize: 16,
-                  fontWeight: FontWeight.w700,
-                  title: 'Miami,California, USA', //AppString.location,
+                  title: "12b, Lekki Phase 1, Lagos, Nigeria",
+                  textSize: 14,
+                  fontWeight: FontWeight.w500,
+                  // controller.singleBookingById?.parentId.address ??
+                  // 'N/A', //"12b, Lekki Phase 1, Lagos, Nigeria",
                 ),
-
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
@@ -104,20 +112,12 @@ class Map extends StatelessWidget {
                   child: Customtext(
                     textSize: 12,
                     fontWeight: FontWeight.w400,
-                    title: '2.2 km', //controller.distance.toString(), //"2.3 km away",
+                    title:
+                        '2.2 km away', //controller.distance.toString(), //"2.3 km away",
                     textColor: Colors.white,
                   ),
                 ),
               ],
-            ),
-            SizedBox(height: AppSize.width(value: 12)),
-
-            Customtext(
-              title: "12b, Lekki Phase 1, Lagos, Nigeria",
-              textSize: 12,
-              fontWeight: FontWeight.w400,
-              // controller.singleBookingById?.parentId.address ??
-              // 'N/A', //"12b, Lekki Phase 1, Lagos, Nigeria",
             ),
             SizedBox(height: AppSize.width(value: 6)),
 
@@ -126,7 +126,7 @@ class Map extends StatelessWidget {
               child: Container(
                 height: 200,
                 width: double.infinity,
-                margin: EdgeInsets.symmetric(horizontal: 16),
+                // margin: EdgeInsets.symmetric(horizontal: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
