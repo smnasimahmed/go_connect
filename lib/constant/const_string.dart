@@ -35,7 +35,7 @@ class ConstString {
   static const cancle = 'Cancel';
   static const readyCheckIn = 'Ready To Check-In?';
   static const uploadPicture = 'Upload Picture';
-  // static const verification = 'Verification';
+  static const send = 'Send';
   // static const verification = 'Verification';
 
   static const String welcomeBackTitle = 'Welcome back';
