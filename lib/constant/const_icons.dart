@@ -27,4 +27,5 @@ class ConstIcons {
   static const String greenDotIcon = 'assets/icons/green_dot.svg';
   static const String notificationIcon = 'assets/icons/notification_icon.svg';
   static const String checkIcon = 'assets/icons/checkIcon.svg';
+  static const String calendarIcon = 'assets/icons/calendarIcon.svg';
 }

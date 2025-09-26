@@ -157,7 +157,7 @@ class DetailsItem extends StatelessWidget {
             child: Customtext(
               title: headers,
               textSize: AppSize.width(value: 12),
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w500,
               textAlign: TextAlign.start,
             ),
           ),

@@ -19,18 +19,19 @@ class ConstString {
   static const welcomeBack = 'Welcome back';
   static const notification = 'Notification';
   static const cars = 'Cars';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
+  static const from = 'From';
+  static const to = 'To';
+  static const message = 'Message';
+  static const licenseNumber = 'License Number';
+  static const status = 'Status';
+  static const totalAmount = 'Total Amount';
+  static const paymentMethod = 'Payment Method';
+  static const date = 'Date';
+  static const transactionId = 'Transaction Id';
+  static const transaction = 'Transaction';
+  static const checkIn = 'Check-In';
+  static const checkOut = 'Check-Out';
+  static const cancle = 'Cancel';
   // static const verification = 'Verification';
   // static const verification = 'Verification';
   // static const verification = 'Verification';
@@ -116,6 +117,7 @@ class ConstString {
   static const fromTheCityStreet =
       'From city streets to coastal escapes—we drive\nyou everywhere inside Africa.';
   static const searchDestination = 'Search Destination';
+  static const destination = 'Destination';
 
   /////////// Map //////////////////
   static const selectYourlocation = 'Select your Location';
@@ -174,12 +176,12 @@ class ConstString {
 
   ///////////////////////// Cars Booking ///////////////////////////////
   static const String booking = 'Booking';
+  static const String bookingId = 'Booking Id';
   static const String bookingtype = 'Booking Type';
   static const String withDriver = 'With Driver';
   static const String withOutDriver = 'Without Driver';
   static const String vehicleType = 'Vehicle Type';
   static const String chooseTime = 'Choose Time';
-  static const String paymentMethod = 'Payment Method';
   static const String choosePaymentOption = 'Choose Payment Option';
   static const String details = 'Details';
   static const String duration = 'Duration';
@@ -188,7 +190,6 @@ class ConstString {
   static const String totalCost = 'Total Cost';
   static const String iHaveReadandAgreeToThe = 'I have read and agree to the ';
   static const String requestABook = 'Request A book';
-  static const String date = 'Date';
   static const String time = 'Time';
 
   ///////////////////////// Owner Details ///////////////////////////////
