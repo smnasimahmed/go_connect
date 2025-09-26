@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:go_connect/booking_screen/booking_page.dart';
+import 'package:go_connect/booking_details_screen/booking_details_page.dart';
 import 'package:go_connect/chat_screen/chat_page.dart';
 import 'package:go_connect/constant/const_icons.dart';
 import 'package:go_connect/home_screen/home_page.dart';
@@ -24,7 +24,7 @@ class NavbarController extends GetxController {
     ConstIcons.bookmarksTabIcon,
   ];
 
-  List<Widget> pages = [HomePage(), SearchPage(), ChatPage(), BookingPage()];
+  List<Widget> pages = [HomePage(), SearchPage(), ChatPage(), BookingDetailsPage()];
 
   RxInt selectedIndex = 0.obs;
 }

@@ -33,8 +33,8 @@ class ConstString {
   static const checkIn = 'Check-In';
   static const checkOut = 'Check-Out';
   static const cancle = 'Cancel';
-  // static const verification = 'Verification';
-  // static const verification = 'Verification';
+  static const readyCheckIn = 'Ready To Check-In?';
+  static const uploadPicture = 'Upload Picture';
   // static const verification = 'Verification';
   // static const verification = 'Verification';
 

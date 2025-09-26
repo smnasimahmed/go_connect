@@ -9,6 +9,7 @@ environment:
 dependencies:
   carousel_slider: ^5.1.1
   dotted_line: ^3.2.3
+  file_picker: ^10.3.3
   flutter:
     sdk: flutter
   flutter_rating_bar: ^4.0.1
@@ -19,6 +20,8 @@ dependencies:
   get_storage: ^2.1.1
   google_fonts: ^6.3.1
   google_maps_flutter: ^2.13.1
+  image_picker: ^1.2.0
+  multi_image_picker_view: ^3.0.0
   pin_code_fields: ^8.0.1
 
 dev_dependencies:

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
-import 'package:go_connect/booking_details_screen/booking_details_page.dart';
+import 'package:go_connect/check_in_screen/check_in_page.dart';
 // import 'package:go_connect/routes/app_routes.dart';
 // import 'package:go_connect/routes/app_routes_file.dart';
 import 'package:go_connect/utils/appSize.dart';
@@ -31,7 +31,7 @@ class MainApp extends StatelessWidget {
           defaultTransition: Transition.noTransition,
           // getPages: appRouteFile,
           // initialRoute: AppRoutes.navbar, //AppRoutes.startingScreens,
-          home: BookingDetailsPage(),
+          home: CheckInPage(),
         ),
       ),
     );
