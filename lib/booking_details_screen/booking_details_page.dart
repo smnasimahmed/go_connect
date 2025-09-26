@@ -1,3 +1,4 @@
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_connect/constant/const_colour.dart';
@@ -34,6 +35,31 @@ class BookingDetailsPage extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class DottedLineCustom extends StatelessWidget {
+  final double? top;
+  final double? bottom;
+  const DottedLineCustom({super.key, this.top, this.bottom});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(top: top ?? 0.0, bottom: bottom ?? 0.0),
+      child: DottedLine(
+        direction: Axis.horizontal,
+        alignment: WrapAlignment.center,
+        lineLength: double.infinity,
+        lineThickness: 1.0,
+        dashLength: 4.0,
+        dashColor: ConstColour.cardBorderColour,
+        dashRadius: 0.0,
+        dashGapLength: 4.0,
+        dashGapColor: Colors.transparent,
+        dashGapRadius: 0.0,
       ),
     );
   }
@@ -139,18 +165,19 @@ class TransectionDetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        DottedLineCustom(top: 12, bottom: 12),
         Customtext(
           title: '${ConstString.transaction} ${ConstString.details}',
           textSize: AppSize.width(value: 18),
           fontWeight: FontWeight.w500,
           bottom: 3,
-          top: 20,
         ),
         DetailsItem(headers: ConstString.status, info: 'Amsterdam, Netherlands'),
         DetailsItem(headers: ConstString.totalAmount, info: 'Amsterdam, Netherlands'),
         DetailsItem(headers: ConstString.paymentMethod, info: 'Amsterdam, Netherlands'),
         DetailsItem(headers: ConstString.date, info: 'Amsterdam, Netherlands'),
         DetailsItem(headers: ConstString.transactionId, info: 'Amsterdam, Netherlands'),
+        SizedBox(height: 10),
       ],
     );
   }
@@ -170,7 +197,6 @@ class DriverDetails extends StatelessWidget {
           textSize: AppSize.width(value: 18),
           fontWeight: FontWeight.w500,
           bottom: 3,
-          top: 20,
         ),
         DetailsItem(headers: ConstString.fullName, info: 'Amsterdam, Netherlands'),
         DetailsItem(headers: ConstString.phoneNumber, info: 'Amsterdam, Netherlands'),
@@ -225,12 +251,12 @@ class HostInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        DottedLineCustom(top: 12, bottom: 12),
         Customtext(
-          top: 11,
           bottom: 12,
           title: ConstString.hostedBy,
           textSize: AppSize.width(value: 18),
-          fontWeight: FontWeight.w700,
+          fontWeight: FontWeight.w500,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -246,7 +272,7 @@ class HostInfo extends StatelessWidget {
                   left: 6,
                   title: 'Samuel',
                   textSize: AppSize.width(value: 16),
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w500,
                 ),
                 Row(
                   children: [
@@ -278,6 +304,7 @@ class HostInfo extends StatelessWidget {
             ),
           ],
         ),
+        DottedLineCustom(top: 12, bottom: 12),
       ],
     );
   }
@@ -289,7 +316,7 @@ class Map extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20.0, bottom: 10),
+      padding: const EdgeInsets.only(top: 0.0, bottom: 10),
       child: Container(
         width: double.infinity,
         // padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
@@ -400,6 +427,7 @@ class BookingInfo extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        DottedLineCustom(top: 12, bottom: 12),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -452,6 +480,7 @@ class BookingInfo extends StatelessWidget {
             ),
           ],
         ),
+        DottedLineCustom(top: 12, bottom: 12),
       ],
     );
   }
