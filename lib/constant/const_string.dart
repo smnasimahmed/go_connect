@@ -177,7 +177,7 @@ class ConstString {
   static const String bookingtype = 'Booking Type';
   static const String withDriver = 'With Driver';
   static const String withOutDriver = 'Without Driver';
-  static const String vehicaleType = 'Vehicale Type';
+  static const String vehicleType = 'Vehicle Type';
   static const String chooseTime = 'Choose Time';
   static const String paymentMethod = 'Payment Method';
   static const String choosePaymentOption = 'Choose Payment Option';

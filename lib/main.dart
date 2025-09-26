@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
-import 'package:go_connect/owner_details/owner_details_page.dart';
+import 'package:go_connect/car_request_screen/car_request_page.dart';
 // import 'package:go_connect/routes/app_routes.dart';
 // import 'package:go_connect/routes/app_routes_file.dart';
 import 'package:go_connect/utils/appSize.dart';
@@ -31,7 +31,7 @@ class MainApp extends StatelessWidget {
           defaultTransition: Transition.noTransition,
           // getPages: appRouteFile,
           // initialRoute: AppRoutes.navbar, //AppRoutes.startingScreens,
-          home: OwnerDetailsPage(),
+          home: CarRequestPage(),
         ),
       ),
     );
