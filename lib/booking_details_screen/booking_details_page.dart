@@ -6,6 +6,7 @@ import 'package:go_connect/constant/const_string.dart';
 import 'package:go_connect/custom_widget/app_image/app_image.dart';
 import 'package:go_connect/custom_widget/app_image/app_image_circular.dart';
 import 'package:go_connect/custom_widget/appbar_blank_back_button.dart';
+import 'package:go_connect/custom_widget/cancle_pop_up.dart';
 import 'package:go_connect/custom_widget/custom_elevated_button.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
 import 'package:go_connect/utils/appSize.dart';
@@ -44,7 +45,7 @@ class BottomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: dead_code
-    return true ? CheckOut() : CheckIN();
+    return false ? CheckOut() : CheckIN();
   }
 }
 
@@ -70,6 +71,7 @@ class CheckOut extends StatelessWidget {
         ),
         CustomElevatedButton(
           top: 0,
+          bottom: 20,
           height: 56,
           elevation: 0,
           onPressed: () {},
@@ -114,7 +116,7 @@ class CheckIN extends StatelessWidget {
           bottom: 10,
           height: 56,
           elevation: 0,
-          onPressed: () {},
+          onPressed: () => canclePopUp(context),
           color: Colors.transparent,
           child: Customtext(
             title: ConstString.cancle,

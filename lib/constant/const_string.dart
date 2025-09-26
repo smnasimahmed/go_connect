@@ -3,6 +3,7 @@ class ConstString {
   static const no = 'No';
   static const code = 'Code';
   static const areYouSureLogOut = 'Are you sure want to log out?';
+  static const areYouSureCancle = 'Are you sure want to Cancle?';
   // Strings from "Verify Account!" screen
   static const verifyAccountTitle = 'Verify Account!';
   static const enter6DigitCode = 'Enter the 6-Digit Code';
