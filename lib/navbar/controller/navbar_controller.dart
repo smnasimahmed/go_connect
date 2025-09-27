@@ -26,5 +26,5 @@ class NavbarController extends GetxController {
 
   List<Widget> pages = [HomePage(), SearchPage(), ChatPage(), BookingPage()];
 
-  RxInt selectedIndex = 0.obs;
+  RxInt selectedIndex = 1.obs;
 }

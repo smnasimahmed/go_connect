@@ -33,6 +33,8 @@ class AppRoutes {
   static const ownerDetailsPage = '/ownerDetailsPage';
   static const bookingDetailsPage = '/bookingDetailsPage';
   static const checkIN = '/checkIN';
+  static const filterByPage = '/filterByPage';
+  static const shortByPage = '/shortByPage';
 
   // static String initialPageFunction() {
   //   if (AppStorage().getStartingScreen() == false &&
