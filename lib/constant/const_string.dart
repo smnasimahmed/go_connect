@@ -202,4 +202,11 @@ class ConstString {
   static const String stars = 'Stars';
   static const String noReviewsAvailable = 'No reviews available';
   static const String noReviewsYet = 'No reviews yet';
+
+  ///////////////////////// Sort By ///////////////////////////////
+  static const String sortBy = 'Sort By';
+  static const String relevance = 'Relevance';
+  static const String lowToHigh = 'Price(Low to High)';
+  static const String highToLow = 'Price(High to Low)';
+  static const String distanceAway = 'Distance Away';
 }
