@@ -5,9 +5,13 @@ import 'package:go_connect/auth_screens/forgetPasswordOTP/forgetPasswordOTPPage.
 import 'package:go_connect/auth_screens/resetPassword/resetPasswordPage.dart';
 import 'package:go_connect/auth_screens/signIn/signInPage.dart';
 import 'package:go_connect/auth_screens/verificationforAccount/verificationforAccountPage.dart';
+import 'package:go_connect/booking_details_screen/booking_details_page.dart';
+import 'package:go_connect/car_details_screen/car_details_page.dart';
 import 'package:go_connect/cars_screens/cars_page.dart';
+import 'package:go_connect/check_in_screen/check_in_page.dart';
 import 'package:go_connect/navbar/navbar.dart';
 import 'package:go_connect/notification_screen/notification_page.dart';
+import 'package:go_connect/owner_details/owner_details_page.dart';
 import 'package:go_connect/profile_screen/about_us_screen/about_us_page.dart';
 import 'package:go_connect/profile_screen/choose_language_screen/choose_language_page.dart';
 import 'package:go_connect/profile_screen/delete_account_screen/delete_account_page.dart';
@@ -65,4 +69,8 @@ List<GetPage> appRouteFile = <GetPage>[
 
   //////////////// Home /////////////////////
   GetPage(name: AppRoutes.carsPage, page: () => const CarsPage()),
+  GetPage(name: AppRoutes.carDetailsPage, page: () => const CarDetailsPage()),
+  GetPage(name: AppRoutes.ownerDetailsPage, page: () => const OwnerDetailsPage()),
+  GetPage(name: AppRoutes.bookingDetailsPage, page: () => const BookingDetailsPage()),
+  GetPage(name: AppRoutes.checkIN, page: () => const CheckInPage()),
 ];

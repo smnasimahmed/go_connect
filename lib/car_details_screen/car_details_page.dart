@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:go_connect/car_details_screen/controller/car_details_controller.dart';
 import 'package:go_connect/car_review_screen/review_screen.dart';
@@ -11,6 +12,7 @@ import 'package:go_connect/custom_widget/app_image/app_image_circular.dart';
 import 'package:go_connect/custom_widget/appbar_blank_back_button.dart';
 import 'package:go_connect/custom_widget/custom_elevated_button.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
+import 'package:go_connect/routes/app_routes.dart';
 import 'package:go_connect/utils/appSize.dart';
 
 class CarDetailsPage extends StatelessWidget {
@@ -232,7 +234,9 @@ class PriceAndbookNowButton extends StatelessWidget {
             top: 0,
             height: 56,
             elevation: 0,
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AppRoutes.bookingDetailsPage);
+            },
             child: Customtext(
               title: ConstString.bookNow,
               fontWeight: FontWeight.w400,
@@ -295,7 +299,9 @@ class HostInfo extends StatelessWidget {
               height: 32,
               width: 0,
               color: ConstColour.textColor,
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(AppRoutes.ownerDetailsPage);
+              },
               child: Customtext(
                 title: ConstString.viewDetails,
                 fontWeight: FontWeight.w500,

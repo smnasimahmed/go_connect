@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_connect/home_screen/controller/home_page_controller.dart';
+import 'package:go_connect/routes/app_routes.dart';
 
 class CarSlider extends StatelessWidget {
   const CarSlider({super.key});
@@ -13,11 +14,14 @@ class CarSlider extends StatelessWidget {
       builder: (controller) {
         return CarouselSlider(
           items: controller.sliderImageList.map((imgPath) {
-            return Container(
-              margin: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover),
+            return GestureDetector(
+              onTap: () => Get.toNamed(AppRoutes.carDetailsPage),
+              child: Container(
+                margin: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover),
+                ),
               ),
             );
           }).toList(),

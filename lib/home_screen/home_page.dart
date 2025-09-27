@@ -61,8 +61,10 @@ class HomePage extends StatelessWidget {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: 2,
-                    itemBuilder: (context, index) => InkWell(
-                      onTap: () {},
+                    itemBuilder: (context, index) => GestureDetector(
+                      onTap: () {
+                        Get.toNamed(AppRoutes.carDetailsPage);
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 12.0),
                         child: CarCard(),

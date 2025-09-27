@@ -1,6 +1,7 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:go_connect/constant/const_colour.dart';
 import 'package:go_connect/constant/const_icons.dart';
 import 'package:go_connect/constant/const_string.dart';
@@ -10,6 +11,7 @@ import 'package:go_connect/custom_widget/appbar_blank_back_button.dart';
 import 'package:go_connect/custom_widget/cancle_pop_up.dart';
 import 'package:go_connect/custom_widget/custom_elevated_button.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
+import 'package:go_connect/routes/app_routes.dart';
 import 'package:go_connect/utils/appSize.dart';
 
 class BookingDetailsPage extends StatelessWidget {
@@ -126,7 +128,9 @@ class CheckIN extends StatelessWidget {
           top: 0,
           height: 56,
           elevation: 0,
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(AppRoutes.checkIN);
+          },
           color: ConstColour.primaryColor,
 
           child: Customtext(

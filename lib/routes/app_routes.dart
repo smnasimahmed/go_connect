@@ -28,6 +28,12 @@ class AppRoutes {
   static const faqPage = "/faqPage";
   static const deleteAccountPage = "/deleteAccountPage";
 
+  ////////////Others Page /////////////////
+  static const carDetailsPage = '/carDetailsPage';
+  static const ownerDetailsPage = '/ownerDetailsPage';
+  static const bookingDetailsPage = '/bookingDetailsPage';
+  static const checkIN = '/checkIN';
+
   // static String initialPageFunction() {
   //   if (AppStorage().getStartingScreen() == false &&
   //       AppStorage().getLoginValue() == false) {
