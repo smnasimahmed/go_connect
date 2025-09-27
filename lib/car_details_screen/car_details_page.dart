@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:go_connect/car_details_screen/controller/car_details_controller.dart';
 import 'package:go_connect/car_review_screen/review_screen.dart';
 import 'package:go_connect/constant/const_colour.dart';
@@ -12,6 +11,7 @@ import 'package:go_connect/custom_widget/app_image/app_image_circular.dart';
 import 'package:go_connect/custom_widget/appbar_blank_back_button.dart';
 import 'package:go_connect/custom_widget/custom_elevated_button.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
+import 'package:go_connect/date_screen.dart/date_pick.dart';
 import 'package:go_connect/routes/app_routes.dart';
 import 'package:go_connect/utils/appSize.dart';
 
@@ -34,6 +34,10 @@ class CarDetailsPage extends StatelessWidget {
                 children: [
                   CarImage(),
                   CarLocationAndName(),
+                  CheckAvaiablity(controller: controller),
+
+                  controller.showCalander ? DatePick() : SizedBox.shrink(),
+
                   Buttons(controller: controller),
 
                   // About(controller: controller),
@@ -56,6 +60,39 @@ class CarDetailsPage extends StatelessWidget {
               ),
             );
           },
+        ),
+      ),
+    );
+  }
+}
+
+class CheckAvaiablity extends StatelessWidget {
+  final CarDetailsController controller;
+  const CheckAvaiablity({super.key, required this.controller});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        controller.setCalanderVisibility();
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(top: 20.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Customtext(
+              right: 5,
+              title: ConstString.checkAvaiablity,
+              textSize: AppSize.width(value: 18),
+              fontWeight: FontWeight.w700,
+            ),
+
+            controller.showCalander
+                ? Icon(Icons.keyboard_arrow_down_rounded)
+                : Icon(Icons.keyboard_arrow_right_rounded),
+          ],
         ),
       ),
     );

@@ -3,6 +3,7 @@ import 'package:go_connect/constant/const_string.dart';
 
 class CarDetailsController extends GetxController {
   bool isSelected = false;
+  bool showCalander = false;
   int currentIndex = 0;
 
   final List<String> buttonTitles = [
@@ -14,6 +15,11 @@ class CarDetailsController extends GetxController {
 
   void setCurrentButtonIndex(int index) {
     currentIndex = index;
+    update();
+  }
+
+  void setCalanderVisibility() {
+    showCalander = !showCalander;
     update();
   }
 }
