@@ -102,7 +102,9 @@ class CheckOut extends StatelessWidget {
           bottom: 20,
           height: 56,
           elevation: 0,
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(AppRoutes.checkIN);
+          },
           color: ConstColour.primaryColor,
 
           child: Customtext(

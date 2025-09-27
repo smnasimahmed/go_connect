@@ -237,4 +237,11 @@ class ConstString {
   static const String apply = 'Apply';
   static const String selectDate = 'Select Date';
   static const String seat = 'Seat';
+
+  ///////////////////////// Filter By  ///////////////////////////////
+  static const String all = 'All';
+  static const String upcoming = 'Upcoming';
+  static const String ongoing = 'Ongoing';
+  static const String completed = 'Completed';
+  static const String cancelled = 'Cancelled';
 }
