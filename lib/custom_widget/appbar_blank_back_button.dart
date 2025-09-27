@@ -9,7 +9,7 @@ AppBar appBarBlankWithBackButton(String title) {
     title: Customtext(
       title: title,
       fontWeight: FontWeight.w500,
-      textSize: AppSize.width(value: 22),
+      textSize: AppSize.width(value: 20),
     ),
     surfaceTintColor: Colors.transparent,
     backgroundColor: Colors.transparent,

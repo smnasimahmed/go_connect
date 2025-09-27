@@ -28,4 +28,6 @@ class ConstIcons {
   static const String notificationIcon = 'assets/icons/notification_icon.svg';
   static const String checkIcon = 'assets/icons/checkIcon.svg';
   static const String calendarIcon = 'assets/icons/calendarIcon.svg';
+  static const String vehicleTypeIcon = 'assets/icons/vehicleTypeIcon.svg';
+  static const String starIcon = 'assets/icons/starIcon.svg';
 }

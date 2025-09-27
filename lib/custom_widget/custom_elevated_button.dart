@@ -94,7 +94,7 @@ ButtonStyle _outlinedButtonStyle(
 ) {
   return ElevatedButton.styleFrom(
     // surfaceTintColor: Colors.transparent,
-    backgroundColor: ConstColour.appDarktBackGround,
+    backgroundColor: Colors.transparent,
     foregroundColor: outLineColour,
     textStyle: GoogleFonts.poppins(
       fontSize: fontSize,

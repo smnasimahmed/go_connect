@@ -209,4 +209,32 @@ class ConstString {
   static const String lowToHigh = 'Price(Low to High)';
   static const String highToLow = 'Price(High to Low)';
   static const String distanceAway = 'Distance Away';
+
+  ///////////////////////// Filter By  ///////////////////////////////
+  static const String filterBy = 'Filter By ';
+  static const String priceTarget = 'Price Target';
+  static const String drivingMode = 'Driving Mode';
+  static const String car = 'Car';
+  static const String trucks = 'Trucks';
+  static const String minivas = 'Minivas';
+  static const String van = 'Van';
+  static const String suv = "Suv's";
+  static const String cargo = 'Cargo';
+  static const String distance = 'Distance';
+  static const String rating = 'Rating';
+  static const String petrol = 'Petrol';
+  static const String gasoline = 'Gasoline';
+  static const String electric = 'Electric';
+  static const String diesel = 'Diesel';
+  static const String hybrid = 'Hybrid';
+  static const String manual = 'Manual';
+  static const String automatic = 'Automatic';
+  static const String premium = 'Premium';
+  static const String standard = 'Standard';
+  static const String economic = 'Economic';
+  static const String special = 'Special';
+  static const String reset = 'Reset';
+  static const String apply = 'Apply';
+  static const String selectDate = 'Select Date';
+  static const String seat = 'Seat';
 }
