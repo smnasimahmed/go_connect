@@ -22,6 +22,7 @@ import 'package:go_connect/profile_screen/faq_screens/faq_page.dart';
 import 'package:go_connect/profile_screen/favourits_screen/favourits_page.dart';
 import 'package:go_connect/profile_screen/password_screen/password_page.dart';
 import 'package:go_connect/profile_screen/profile_page.dart';
+import 'package:go_connect/profile_screen/re_submit_kyc_screen/re_submit_kyc_page.dart';
 import 'package:go_connect/profile_screen/terms_conditions_screen/terms_conditions_page.dart';
 import 'package:go_connect/routes/app_routes.dart';
 import 'package:go_connect/routes/bindings/authBindings.dart';
@@ -63,6 +64,7 @@ List<GetPage> appRouteFile = <GetPage>[
   GetPage(name: AppRoutes.profilePage, page: () => const ProfilePage()),
   GetPage(name: AppRoutes.editProfilePage, page: () => const EditProfilePage()),
   GetPage(name: AppRoutes.chooseLanguagePage, page: () => const ChooseLanguagePage()),
+  GetPage(name: AppRoutes.reSubmitKycPage, page: () => const ReSubmitKycPage()),
   GetPage(name: AppRoutes.favouritsPage, page: () => const FavouritsPage()),
   GetPage(name: AppRoutes.passwordPage, page: () => const PasswordPage()),
   GetPage(name: AppRoutes.aboutUsPage, page: () => const AboutUsPage()),

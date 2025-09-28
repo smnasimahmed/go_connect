@@ -130,6 +130,7 @@ class ConstString {
   static const String editProfileInformation = 'Edit Profile Information';
   static const String switchIntoHost = 'Switch Into Host';
   static const String chooseLanguage = 'Choose Language';
+  static const String reSubmitKYC = 'Re-submit KYC';
   static const String changePassword = 'Change Password';
   static const String currrentPassword = 'Current Password';
   static const String enterNewpassword = 'Enter New Password';

@@ -20,6 +20,7 @@ class ProfilePage extends StatelessWidget {
       ConstIcons.editProfileInformation,
       // ConstIcons.switchIntoHost,
       ConstIcons.chooseLanguage,
+      ConstIcons.reSubmitKYC,
       ConstIcons.favorites,
       ConstIcons.password,
       ConstIcons.aboutUs,
@@ -31,6 +32,7 @@ class ProfilePage extends StatelessWidget {
       ConstString.editProfileInformation,
       // ConstString.switchIntoHost,
       ConstString.chooseLanguage,
+      ConstString.reSubmitKYC,
       ConstString.favorites,
       ConstString.password,
       ConstString.aboutUs,
@@ -42,6 +44,7 @@ class ProfilePage extends StatelessWidget {
     List<String> pages = [
       AppRoutes.editProfilePage,
       AppRoutes.chooseLanguagePage,
+      AppRoutes.reSubmitKycPage,
       AppRoutes.favouritsPage,
       AppRoutes.passwordPage,
       AppRoutes.aboutUsPage,
@@ -58,7 +61,7 @@ class ProfilePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: AppSize.width(value: 35)),
+            SizedBox(height: AppSize.width(value: 15)),
             AppImageCircular(
               path: 'assets/images/car.png',
               height: AppSize.width(value: 90),
@@ -72,32 +75,20 @@ class ProfilePage extends StatelessWidget {
             ),
             Customtext(
               top: 2,
-              bottom: AppSize.width(value: 35),
+              bottom: AppSize.width(value: 15),
               title: ConstString.switchIntoHost,
               textColor: ConstColour.primaryColor,
               textSize: AppSize.width(value: 12),
               fontWeight: FontWeight.w500,
             ),
-            SizedBox(height: AppSize.width(value: 2)),
+            // SizedBox(height: AppSize.width(value: 2)),
             ...List.generate(icons.length, (index) {
               final page = pages[index];
               return InkWell(
                 onTap: () => Get.toNamed(page),
-
-                // onTap: () async {
-                //   final page = pages[index];
-
-                //   if (page.startsWith("http")) {
-                //     // open external link
-                //     await openInBrowser(page);
-                //   } else {
-                //     // navigate inside app
-                //     Get.toNamed(page);
-                //   }
-                // },
                 child: Padding(
                   padding: EdgeInsets.symmetric(
-                    vertical: AppSize.width(value: 11.69),
+                    vertical: AppSize.width(value: 10.69),
                     horizontal: AppSize.width(value: 24),
                   ),
                   child: Row(

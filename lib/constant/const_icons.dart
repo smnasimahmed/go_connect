@@ -20,6 +20,7 @@ class ConstIcons {
   static const String termsAndConditions =
       'assets/icons/profile_icons/termsAndConditions.svg';
   static const String cameraIcon = 'assets/icons/profile_icons/cameraIcon.svg';
+  static const String reSubmitKYC = 'assets/icons/profile_icons/reSubmitKYC.svg';
 
   // Other icon
   static const String carsIcon = 'assets/icons/car_icon.svg';

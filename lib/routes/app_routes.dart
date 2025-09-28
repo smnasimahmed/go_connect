@@ -21,6 +21,7 @@ class AppRoutes {
   static const profilePage = "/profilePage";
   static const editProfilePage = "/editProfilePage";
   static const chooseLanguagePage = "/chooseLanguagePage";
+  static const reSubmitKycPage = "/reSubmitKycPage";
   static const favouritsPage = "/favouritsPage";
   static const passwordPage = "/passwordPage";
   static const aboutUsPage = "/aboutUsPage";
