@@ -32,4 +32,5 @@ class ConstIcons {
   static const String starIcon = 'assets/icons/starIcon.svg';
   static const String filterIcon = 'assets/icons/filterIcon.svg';
   static const String sortIcon = 'assets/icons/sortIcon.svg';
+  static const String searchIcon = 'assets/icons/searchIcon.svg';
 }

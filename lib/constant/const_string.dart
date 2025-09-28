@@ -244,4 +244,8 @@ class ConstString {
   static const String ongoing = 'Ongoing';
   static const String completed = 'Completed';
   static const String cancelled = 'Cancelled';
+
+  ///////////////////////// Messages  ///////////////////////////////
+  static const String messages = 'Messages';
+  static const String searchHere = 'Search Here';
 }

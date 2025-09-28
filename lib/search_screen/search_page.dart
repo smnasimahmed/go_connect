@@ -35,7 +35,7 @@ class SearchPage extends StatelessWidget {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: 6,
-                itemBuilder: (context, index) => InkWell(
+                itemBuilder: (context, index) => GestureDetector(
                   onTap: () {},
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 12.0),

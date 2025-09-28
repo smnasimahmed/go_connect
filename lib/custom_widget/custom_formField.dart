@@ -12,6 +12,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController textController;
   final String? Function(String?) validator;
   final Color? backgroundColor;
+  final Widget? prefixIcon;
 
   const CustomTextFormField({
     super.key,
@@ -23,6 +24,7 @@ class CustomTextFormField extends StatelessWidget {
     this.backgroundColor,
     required this.textController,
     required this.validator,
+    this.prefixIcon,
   });
 
   @override
@@ -32,13 +34,15 @@ class CustomTextFormField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Customtext(
-            top: 5,
-            bottom: 2,
-            title: fromTitle,
-            textSize: AppSize.width(value: 16),
-            fontWeight: FontWeight.w600,
-          ),
+          fromTitle == ''
+              ? SizedBox.shrink()
+              : Customtext(
+                  top: 5,
+                  bottom: 2,
+                  title: fromTitle,
+                  textSize: AppSize.width(value: 16),
+                  fontWeight: FontWeight.w600,
+                ),
           TextFormField(
             style: TextStyle(
               color: ConstColour.textColor,
@@ -55,6 +59,7 @@ class CustomTextFormField extends StatelessWidget {
             keyboardType: numaric ? TextInputType.number : null,
             cursorColor: ConstColour.primaryColor,
             decoration: InputDecoration(
+              prefixIcon: prefixIcon,
               filled: backgroundColor != null,
               fillColor: backgroundColor,
               hoverColor: ConstColour.primaryColor,
