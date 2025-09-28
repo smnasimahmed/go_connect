@@ -10,6 +10,7 @@ import 'package:go_connect/car_details_screen/car_details_page.dart';
 import 'package:go_connect/cars_screens/cars_page.dart';
 import 'package:go_connect/check_in_screen/check_in_page.dart';
 import 'package:go_connect/filter_by_screens/filter_by_page.dart';
+import 'package:go_connect/inbox_screen.dart/inbox_screen_page.dart';
 import 'package:go_connect/navbar/navbar.dart';
 import 'package:go_connect/notification_screen/notification_page.dart';
 import 'package:go_connect/owner_details/owner_details_page.dart';
@@ -77,4 +78,7 @@ List<GetPage> appRouteFile = <GetPage>[
   GetPage(name: AppRoutes.checkIN, page: () => const CheckInPage()),
   GetPage(name: AppRoutes.filterByPage, page: () => const FilterByPage()),
   GetPage(name: AppRoutes.shortByPage, page: () => const ShortByPage()),
+
+  //////////////// Home /////////////////////
+  GetPage(name: AppRoutes.inboxScreenPage, page: () => const InboxScreenPage()),
 ];

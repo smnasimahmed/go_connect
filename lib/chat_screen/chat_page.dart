@@ -8,6 +8,7 @@ import 'package:go_connect/constant/const_string.dart';
 import 'package:go_connect/custom_widget/app_image/app_image_circular.dart';
 import 'package:go_connect/custom_widget/custom_formField.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
+import 'package:go_connect/routes/app_routes.dart';
 import 'package:go_connect/utils/appSize.dart';
 
 class ChatPage extends StatelessWidget {
@@ -32,7 +33,7 @@ class ChatPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Customtext(
-                    title: ConstString.airConditioning,
+                    title: ConstString.message,
                     textSize: AppSize.width(value: 26),
                     fontWeight: FontWeight.w700,
                   ),
@@ -61,7 +62,9 @@ class ChatPage extends StatelessWidget {
             itemBuilder: (context, index) => Padding(
               padding: const EdgeInsets.symmetric(vertical: 6.0),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(AppRoutes.inboxScreenPage);
+                },
                 child: Container(
                   padding: EdgeInsets.all(9.5),
                   child: Row(

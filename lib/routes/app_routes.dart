@@ -35,6 +35,7 @@ class AppRoutes {
   static const checkIN = '/checkIN';
   static const filterByPage = '/filterByPage';
   static const shortByPage = '/shortByPage';
+  static const inboxScreenPage = '/inboxScreenPage';
 
   // static String initialPageFunction() {
   //   if (AppStorage().getStartingScreen() == false &&
