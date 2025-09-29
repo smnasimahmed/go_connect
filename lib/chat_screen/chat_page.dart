@@ -56,51 +56,56 @@ class ChatPage extends StatelessWidget {
               ),
             ),
           ),
-          body: ListView.builder(
-            padding: EdgeInsets.symmetric(horizontal: 12),
-            itemCount: 12,
-            itemBuilder: (context, index) => Padding(
-              padding: const EdgeInsets.symmetric(vertical: 6.0),
-              child: InkWell(
-                onTap: () {
-                  Get.toNamed(AppRoutes.inboxScreenPage);
-                },
-                child: Container(
-                  padding: EdgeInsets.all(9.5),
-                  child: Row(
-                    children: [
-                      AppImageCircular(
-                        path: 'assets/images/car.png',
-                        height: 46,
-                        width: 46,
-                      ),
-                      SizedBox(width: 10),
-                      Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Customtext(
-                            title: 'Jack Dawson',
-                            textSize: AppSize.width(value: 14),
-                            fontWeight: FontWeight.w500,
-                          ),
-                          Customtext(
-                            title: 'Jack Dawson',
-                            textSize: AppSize.width(value: 12),
-                            fontWeight: FontWeight.w400,
-                            textColor: ConstColour.cardBorderColour,
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      Customtext(
-                        title: '09:01 am',
-                        textSize: AppSize.width(value: 10),
-                        fontWeight: FontWeight.w400,
-                        textColor: ConstColour.cardBorderColour,
-                      ),
-                    ],
+          body: RefreshIndicator(
+            onRefresh: () async {
+              await Future.delayed(Duration(seconds: 2));
+            },
+            child: ListView.builder(
+              padding: EdgeInsets.symmetric(horizontal: 12),
+              itemCount: 12,
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.symmetric(vertical: 6.0),
+                child: InkWell(
+                  onTap: () {
+                    Get.toNamed(AppRoutes.inboxScreenPage);
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(9.5),
+                    child: Row(
+                      children: [
+                        AppImageCircular(
+                          path: 'assets/images/car.png',
+                          height: 46,
+                          width: 46,
+                        ),
+                        SizedBox(width: 10),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Customtext(
+                              title: 'Jack Dawson',
+                              textSize: AppSize.width(value: 14),
+                              fontWeight: FontWeight.w500,
+                            ),
+                            Customtext(
+                              title: 'Jack Dawson',
+                              textSize: AppSize.width(value: 12),
+                              fontWeight: FontWeight.w400,
+                              textColor: ConstColour.cardBorderColour,
+                            ),
+                          ],
+                        ),
+                        Spacer(),
+                        Customtext(
+                          title: '09:01 am',
+                          textSize: AppSize.width(value: 10),
+                          fontWeight: FontWeight.w400,
+                          textColor: ConstColour.cardBorderColour,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

@@ -35,4 +35,6 @@ class ConstIcons {
   static const String sortIcon = 'assets/icons/sortIcon.svg';
   static const String searchIcon = 'assets/icons/searchIcon.svg';
   static const String threeDotMenuIcon = 'assets/icons/threeDotMenuIcon.svg';
+  static const String inboxImageUploadIcon = 'assets/icons/inboxImageUploadIcon.svg';
+  static const String inboxSendIcon = 'assets/icons/inboxSendIcon.svg';
 }

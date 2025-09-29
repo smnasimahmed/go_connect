@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:go_connect/constant/const_colour.dart';
 import 'package:go_connect/constant/const_icons.dart';
+import 'package:go_connect/custom_widget/app_image/app_image.dart';
 import 'package:go_connect/custom_widget/app_image/app_image_circular.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
 import 'package:go_connect/inbox_screen.dart/controller/inbox_screen_controller.dart';
@@ -13,6 +14,7 @@ class InboxScreenPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bottomPadding = MediaQuery.of(context).viewInsets.bottom;
     return Scaffold(
       appBar: AppBar(
         leading: GestureDetector(
@@ -45,73 +47,75 @@ class InboxScreenPage extends StatelessWidget {
           ],
         ),
       ),
-
+      bottomNavigationBar: SafeArea(child: _chatInputField(bottomPadding)),
       body: GetBuilder(
         init: InboxScreenController(),
         builder: (controller) {
           return ListView.builder(
+            reverse: true,
             padding: EdgeInsets.symmetric(horizontal: 12, vertical: 20),
             itemCount: controller.chatMessages.length,
             itemBuilder: (context, index) => Row(
               mainAxisAlignment: controller.myID == controller.chatMessages[index].userID
-                  ? MainAxisAlignment.start
-                  : MainAxisAlignment.end,
+                  ? MainAxisAlignment.end
+                  : MainAxisAlignment.start,
               children: [
-                controller.myID != controller.chatMessages[index].userID
+                controller.myID == controller.chatMessages[index].userID
                     ? SizedBox.shrink()
                     : Padding(
                         padding: const EdgeInsets.only(right: 5.0),
                         child: AppImageCircular(
-                          path: controller.chatMessages[index].imagePath,
+                          path: controller.chatMessages[index].userImagePath,
                           height: 36,
                         ),
                       ),
                 Column(
                   crossAxisAlignment:
                       controller.myID == controller.chatMessages[index].userID
-                      ? CrossAxisAlignment.start
-                      : CrossAxisAlignment.end,
+                      ? CrossAxisAlignment.end
+                      : CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
-                      width: AppSize.width(value: 246),
-                      child: Container(
-                        constraints: BoxConstraints(
-                          minWidth: 10,
-                          maxWidth: AppSize.width(value: 246),
-                        ),
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: controller.myID == controller.chatMessages[index].userID
-                              ? const Color.fromARGB(87, 0, 150, 135)
-                              : ConstColour.textColor,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft:
-                                controller.myID != controller.chatMessages[index].userID
-                                ? Radius.circular(10)
-                                : Radius.circular(0),
-                            bottomRight:
-                                controller.myID == controller.chatMessages[index].userID
-                                ? Radius.circular(10)
-                                : Radius.circular(0),
-                          ),
-                        ),
-                        child: Customtext(
-                          title: controller.chatMessages[index].message,
-                          textColor:
+                    Container(
+                      constraints: BoxConstraints(
+                        minWidth: 10,
+                        maxWidth: AppSize.width(value: 246),
+                      ),
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: controller.myID == controller.chatMessages[index].userID
+                            ? ConstColour.textColor
+                            : const Color.fromARGB(87, 0, 150, 135),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                          bottomLeft:
                               controller.myID == controller.chatMessages[index].userID
-                              ? ConstColour.textColor
-                              : Colors.white,
+                              ? Radius.circular(10)
+                              : Radius.circular(0),
+                          bottomRight:
+                              controller.myID != controller.chatMessages[index].userID
+                              ? Radius.circular(10)
+                              : Radius.circular(0),
                         ),
                       ),
+                      child: controller.chatMessages[index].message == null
+                          ? AppImage(path: controller.chatMessages[index].image)
+                          : Customtext(
+                              title:
+                                  controller.chatMessages[index].message ??
+                                  'text not load',
+                              textColor:
+                                  controller.myID == controller.chatMessages[index].userID
+                                  ? Colors.white
+                                  : ConstColour.textColor,
+                              maxLine: 1000,
+                            ),
                     ),
                     Customtext(
                       title: controller.chatMessages[index].time,
                       textColor: ConstColour.cardBorderColour,
                       textSize: AppSize.width(value: 8),
                       fontWeight: FontWeight.w400,
-                      // textAlign: TextAlign.right,
                     ),
                   ],
                 ),
@@ -120,6 +124,60 @@ class InboxScreenPage extends StatelessWidget {
           );
         },
       ),
+    );
+  }
+
+  Widget _chatInputField(double bottomPadding) {
+    return GetBuilder(
+      init: InboxScreenController(),
+      builder: (controller) {
+        return Padding(
+          padding: EdgeInsets.only(
+            left: 12,
+            right: 12,
+            bottom: bottomPadding + 20,
+            top: 10,
+          ),
+          child: SizedBox(
+            height: 56,
+            child: Row(
+              children: [
+                InkWell(
+                  onTap: () => controller.pickPhotoFromGallery(),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 6.0),
+                    child: SvgPicture.asset(ConstIcons.inboxImageUploadIcon),
+                  ),
+                ),
+                Expanded(
+                  child: TextFormField(
+                    controller: controller.textController,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                        borderSide: BorderSide(color: Colors.grey),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                        borderSide: BorderSide(color: Colors.grey),
+                      ),
+                    ),
+                    maxLines: 1,
+                  ),
+                ),
+
+                InkWell(
+                  onTap: () => controller.sendMessage(),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 6.0),
+                    child: SvgPicture.asset(ConstIcons.inboxSendIcon),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }
