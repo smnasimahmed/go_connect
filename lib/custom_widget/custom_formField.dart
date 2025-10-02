@@ -13,6 +13,7 @@ class CustomTextFormField extends StatelessWidget {
   final String? Function(String?) validator;
   final Color? backgroundColor;
   final Widget? prefixIcon;
+  final double? borderRadius;
 
   const CustomTextFormField({
     super.key,
@@ -25,6 +26,7 @@ class CustomTextFormField extends StatelessWidget {
     required this.textController,
     required this.validator,
     this.prefixIcon,
+    this.borderRadius,
   });
 
   @override
@@ -73,23 +75,23 @@ class CustomTextFormField extends StatelessWidget {
               hint: hintText,
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: ConstColour.cardBorderColour),
-                borderRadius: BorderRadius.circular(100),
+                borderRadius: BorderRadius.circular(borderRadius ?? 100),
               ),
               border: OutlineInputBorder(
                 borderSide: BorderSide(color: ConstColour.cardBorderColour),
-                borderRadius: BorderRadius.circular(100),
+                borderRadius: BorderRadius.circular(borderRadius ?? 100),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.black),
-                borderRadius: BorderRadius.circular(100),
+                borderRadius: BorderRadius.circular(borderRadius ?? 100),
               ),
               errorBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.red),
-                borderRadius: BorderRadius.circular(100),
+                borderRadius: BorderRadius.circular(borderRadius ?? 100),
               ),
               focusedErrorBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.red),
-                borderRadius: BorderRadius.circular(100),
+                borderRadius: BorderRadius.circular(borderRadius ?? 100),
               ),
               errorStyle: TextStyle(color: Colors.red),
             ),

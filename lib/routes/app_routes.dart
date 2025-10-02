@@ -34,6 +34,7 @@ class AppRoutes {
   static const ownerDetailsPage = '/ownerDetailsPage';
   static const bookingDetailsPage = '/bookingDetailsPage';
   static const checkIN = '/checkIN';
+  static const checkOutPage = '/checkOutPage';
   static const filterByPage = '/filterByPage';
   static const shortByPage = '/shortByPage';
   static const inboxScreenPage = '/inboxScreenPage';

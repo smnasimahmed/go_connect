@@ -5,6 +5,7 @@ import 'package:go_connect/constant/const_string.dart';
 import 'package:go_connect/custom_widget/car_slider.dart';
 import 'package:go_connect/custom_widget/custom_elevated_button.dart';
 import 'package:go_connect/custom_widget/custom_text.dart';
+import 'package:go_connect/custom_widget/feedback_pop_up/give_feedback_pop_up.dart';
 import 'package:go_connect/home_screen/controller/home_page_controller.dart';
 import 'package:go_connect/routes/app_routes.dart';
 import 'package:go_connect/utils/appSize.dart';
@@ -108,7 +109,9 @@ class HomePage extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           textAlign: TextAlign.center,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          giveFeedbackPopUp(context: context);
+                        },
                       ),
                     ],
                   ),

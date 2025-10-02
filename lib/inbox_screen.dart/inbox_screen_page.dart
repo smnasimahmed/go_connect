@@ -17,6 +17,9 @@ class InboxScreenPage extends StatelessWidget {
     final bottomPadding = MediaQuery.of(context).viewInsets.bottom;
     return Scaffold(
       appBar: AppBar(
+        shadowColor: Colors.white,
+        backgroundColor: Colors.white,
+        surfaceTintColor: Colors.white,
         leading: GestureDetector(
           onTap: () => Get.back(),
           child: Icon(Icons.keyboard_arrow_left_rounded),
@@ -53,7 +56,7 @@ class InboxScreenPage extends StatelessWidget {
         builder: (controller) {
           return ListView.builder(
             reverse: true,
-            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+            padding: EdgeInsets.symmetric(horizontal: 12),
             itemCount: controller.chatMessages.length,
             itemBuilder: (context, index) => Row(
               mainAxisAlignment: controller.myID == controller.chatMessages[index].userID
@@ -135,7 +138,7 @@ class InboxScreenPage extends StatelessWidget {
           padding: EdgeInsets.only(
             left: 12,
             right: 12,
-            bottom: bottomPadding + 20,
+            bottom: bottomPadding + 10,
             top: 10,
           ),
           child: SizedBox(
@@ -165,7 +168,6 @@ class InboxScreenPage extends StatelessWidget {
                     maxLines: 1,
                   ),
                 ),
-
                 InkWell(
                   onTap: () => controller.sendMessage(),
                   child: Padding(

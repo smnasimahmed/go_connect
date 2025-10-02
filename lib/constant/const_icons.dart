@@ -37,4 +37,5 @@ class ConstIcons {
   static const String threeDotMenuIcon = 'assets/icons/threeDotMenuIcon.svg';
   static const String inboxImageUploadIcon = 'assets/icons/inboxImageUploadIcon.svg';
   static const String inboxSendIcon = 'assets/icons/inboxSendIcon.svg';
+  static const String rateAppExperienceIcon = 'assets/icons/rateAppExperienceIcon.png';
 }

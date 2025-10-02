@@ -34,6 +34,7 @@ class ConstString {
   static const checkOut = 'Check-Out';
   static const cancle = 'Cancel';
   static const readyCheckIn = 'Ready To Check-In?';
+  static const readyCheckOut = 'Ready To Check-Out?';
   static const uploadPicture = 'Upload Picture';
   static const send = 'Send';
   // static const verification = 'Verification';
@@ -193,6 +194,8 @@ class ConstString {
   static const String iHaveReadandAgreeToThe = 'I have read and agree to the ';
   static const String requestABook = 'Request A book';
   static const String time = 'Time';
+  static const String rateYourRideExperiences = "Rate Your Ride Experience";
+  static const String giveYourFeedbackHere = "Give your feedback here";
 
   ///////////////////////// Owner Details ///////////////////////////////
   static const String ownerDetails = 'Owner Details';

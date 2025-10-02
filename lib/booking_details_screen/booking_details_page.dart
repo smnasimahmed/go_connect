@@ -73,7 +73,7 @@ class BottomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: dead_code
-    return false ? CheckOut() : CheckIN();
+    return true ? CheckOut() : CheckIN();
   }
 }
 
@@ -103,7 +103,7 @@ class CheckOut extends StatelessWidget {
           height: 56,
           elevation: 0,
           onPressed: () {
-            Get.toNamed(AppRoutes.checkIN);
+            Get.toNamed(AppRoutes.checkOutPage);
           },
           color: ConstColour.primaryColor,
 
